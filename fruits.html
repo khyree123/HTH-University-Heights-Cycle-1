@@ -1,0 +1,37 @@
+1<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<h1 id="fruits"></h1>
+		<button onclick="addFruits()">Click Here </button>
+		<button onclick="deleteFruits()">remove fruit</button>
+		<button onclick="sortfruit()">order</button>
+		
+		<script type="text/javascript">
+			var array = ["apple","orange","kiwi"];
+
+
+			document.getElementById("fruits").innerHTML = array;
+			function addFruits(){
+				var add = prompt(" Add fruits here")
+				array.push(add);
+				document.getElementById("fruits").innerHTML = array; 
+			}
+			function deleteFruits(){
+				array.shift();
+				document.getElementById("fruits").innerHTML = array; 
+
+			}
+			function sortFruit(){
+				array.sort();
+				document.getElementById("fruits").innerHTML = array; 
+			}
+
+			
+
+		</script>
+	</body>
+	</html>
